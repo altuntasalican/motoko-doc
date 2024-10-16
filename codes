@@ -1,0 +1,32 @@
+actor calculator{
+ var num :Int = 0;
+
+ public func addition (a: Int) : async Int{
+      num +=a;
+      num
+ };
+ public func substraction (a: Int) : async Int{
+      num -=a;
+      num
+ };
+  public func multiplication (a: Int) : async Int{
+      num *=a;
+      num
+ };
+  public func division (a: Int) : async ?Int{
+      if( a == 0)
+      {
+        null
+      }
+      else{
+      num /=a;
+      ?num
+      };
+ };
+
+   public func clear() : async (){
+    num := 0;
+   };
+
+
+};
